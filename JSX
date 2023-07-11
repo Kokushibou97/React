@@ -1,0 +1,7 @@
+What is it that makes JSX so special? In one word, expressiveness. 
+Developers can express what they want to react to render using a very expressive syntax, almost identical to HTML or XML. 
+In other words, JSX allows developers to write HTML directly inside the JavaScript code. For example, you can add navigation function to a website by creating a nav component. 
+Then place the HTML semantic nav element, and an unordered list inside. Because this is React, the list values can be made dynamic by passing values as props. 
+Is important to note that a regular JavaScript function is used to define how React should render the component wherever it's referenced using the nav JSX elements. 
+This is what makes JSX so powerful, like the fact that you can insert specific JSX expressions such as variables and props. 
+The reason why this is so great to work with, is because anything that's placed inside the curly braces of the code is essentially regular JavaScript code. 
