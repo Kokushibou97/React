@@ -1,0 +1,97 @@
+Here is the completed App.js file:
+import React from "react";
+import Fruits from "./Fruits";
+import FruitsCounter from "./FruitsCounter";
+
+function App() {
+  const [fruits] = React.useState([
+      {fruitName: 'apple', id: 1},
+      {fruitName: 'apple', id: 2},
+      {fruitName: 'plum', id: 3},
+  ]);
+
+  return (
+    <div className="App">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
+    </div>
+  );
+}
+
+export default App;
+
+
+Here is the completed Fruits.js file:
+function Fruits(props) {
+    return (
+        <div>
+            {props.fruits.map(f => <p key={f.id}>{f.fruitName}</p>)}
+        </div>
+    )
+}
+
+export default Fruits
+
+Here is the completed FruitsCounter.js file:
+function FruitsCounter(props) {
+    return (
+        <h2>Total fruits: {props.fruits.length}</h2>
+    )
+}
+
+export default FruitsCounter;
+
+
+const [fruits] = React.useState([
+    {fruitName: 'apple', id: 1},
+    {fruitName: 'apple', id: 2},
+    {fruitName: 'plum', id: 3},
+]);
+
+
+You also need to cut the import React from "react"; at the very top of the Fruits component, since you no longer need to access the useState method on the React object from the Fruits file. 
+
+Additionally, you need to add the import statement to the App component, which means that you should inject a new import at the very top of App.js:
+
+import React from "react";
+
+
+Once you've done that, you need to update the App component's return statement so that it sends the fruits data to the Fruits and FruitsCounter component - since both of these components need to get this state's data via props.
+
+// The updated return statement in App.js:
+  return (
+    <div className="App">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
+    </div>
+  );
+
+The Fruits component should be updated so that it accepts state from the App component.
+
+Now all that you need to do is to update the code in the Fruits components to accept the props object and render the fruits property where appropriate.
+
+That means that the Fruits component will end up having the following code:
+function Fruits(props) {
+    return (
+        <div>
+            {props.fruits.map(f => <p key={f.id}>{f.fruitName}</p>)}
+        </div>
+    )
+}
+
+export default Fruits
+
+Once you've lifted the state up from the Fruits component to the App component, you also need to update the FruitsCounter component. 
+
+Just like the Fruits component, the FruitsCounter component should also receive state from the App component, so that it can display the number of the available fruits using the length property of the array of fruits from the fruits state variable.
+
+The FruitsCounter component will end up having the following code:
+function FruitsCounter(props) {
+    return (
+        <h2>Total fruits: {props.fruits.length}</h2>
+    )
+}
+
+export default FruitsCounter;
