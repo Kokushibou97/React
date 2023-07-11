@@ -1,0 +1,3 @@
+function Example () [ return (<h1>Example</h1>) ]
+The code above shows the component Example. defined as a function, it does not receive any parameters. 
+Also it has a return statment with <h1>Example</h1> text in a pair or parentnthesis
