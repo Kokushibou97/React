@@ -1,0 +1,79 @@
+Here is the completed App.js file:
+import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading firstName="Bob" />
+      <Heading firstName="Any name other than Bob" />
+    </div>
+  );
+}
+
+export default App;
+
+And here is the completed Heading.js file:
+function Heading(props) {
+    return (
+        <h1>Hello, {props.firstName}</h1>
+    )
+}
+
+export default Heading;
+
+
+function Heading(props) {
+    return (
+        <h1>Hello, </h1>
+    )
+}
+
+export default Heading;
+
+
+function Heading(props) {
+    return (
+        <h1>Hello, {props.firstName}</h1>
+    )
+}
+
+export default Heading;
+
+import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading firstName="Bob" />
+    </div>
+  );
+}
+
+export default App;
+
+import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading firstName="Any name other than Bob" />
+    </div>
+  );
+}
+
+export default App;
+
+
+import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading firstName="Any name other than Bob" />
+      <Heading firstName="Jack" />
+    </div>
+  );
+}
+
+export default App;
+
