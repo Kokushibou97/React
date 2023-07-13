@@ -1,0 +1,84 @@
+What is npm?
+When Node.js is installed on a computer, npm comes bundled with it.
+
+With npm, you can:
+
+Author your own Node.js modules ("packages"), and publish them on the npm website so that other people can download and use them 
+
+Use other people's authored modules ("packages") 
+
+So, ultimately, npm is all about code sharing and reuse. You can use other people's code in your own projects, and you can also publish your own Node.js modules so that other people can use them.
+
+An example npm module that can be useful for a new React developer is 
+create-react-app
+. While this npm module comes with its own website, you can also find some info on the 
+create-react-app project on GitHub
+. 
+
+Whenever you run the npm command to add other people's code, that code, and all other Node modules that depend on it, get downloaded to your machine.
+
+However, although it's possible to do so, this is not really necessary, at least in the case of the create-react-app Node module.
+
+In other words, you can avoid installing the create-react-app package but still use it.
+
+You can do that by running the following command: npm init react-app example, where “example” is the actual name of your app. You can use any name you’d like, but it’s always good to have a name that is descriptive and short.
+
+In the next section, you'll learn how to build a brand new app that you can name: firstapp.
+
+Opening the built-in VS Code terminal and running npm init react-app command
+In VS Code, click on View, Terminal to open the built-in terminal.
+
+now run the command to add a brand new React app to the machine:
+npm init react-app firstapp
+
+
+The installation and setup might take a few minutes.
+
+Here's the output of executing the above command:
+Creating a new React app in /home/pc/Desktop/firstapp.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+added 1383 packages in 56s
+
+190 packages are looking for funding
+                       run `npm fund` for details
+
+Initialized a git repository.
+
+Installing template dependencies using npm...
+npm WARN deprecated source-map-resolve@0.6.0:
+See https://github.com/lydell/source-map-resolve#deprecated
+
+added 39 packages in 6s
+
+190 packages are looking for funding
+                       run `npm fund` for details
+Removing template package using npm...
+
+removed 1 package, and audited 1422 packages in 3s
+
+190 packages are looking for funding
+                       run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+npm audit fix --force
+
+Run `npm audit` for details.
+
+Created git commit.
+
+Success! Created firstapp at /home/pc/Desktop/firstapp
+Inside that directory, you can run several commands:
+
+
+If you follow the suggestions from the above output, you'll run: cd firstapp, and then npm start.
+
+Following the instructions, opening a browser with the address bar pointing to 
+http://localhost:3000
+, will show the following page in your browser: (react)
+
+
