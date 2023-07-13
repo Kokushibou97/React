@@ -1,0 +1,120 @@
+Here is the Contact.js file:
+function Contact() {
+    return  <h1>Contact Little Lemon on this page.</h1>
+}
+export default Contact
+
+Here is the completed App.js file:
+import "./App.css";
+import Homepage from "./Homepage";
+import AboutLittleLemon from "./AboutLittleLemon";
+import Contact from "./Contact";
+import { Routes, Route, Link } from "react-router-dom";
+
+function App() {
+  return (
+    <div> 
+	  <nav>
+      <Link to="/" className="nav-item">Homepage</Link>
+      <Link to="/about" className="nav-item">About Little Lemon</Link>
+      <Link to="/contact" className="nav-item">Contact</Link>
+	  </nav>
+      <Routes> 
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
+
+First, you added a new file, Contact.js, to the root of the src folder. 
+Inside the Contact.js file, you added an ES5 function, named Contact. And then, added the export default Contact after the Contact function's closing curly brace. 
+function Contact() {
+
+};
+export default Contact;
+Next, inside the body of the Contact function, you added a return statement with the following code: <h1>Contact Little Lemon on this page.</h1>.
+function Contact() {
+    return  <h1>Contact Little Lemon on this page.</h1>
+};
+export default Contact;
+
+Inside the App.js file, you imported the newly-built Contact component. 
+import "./App.css";
+import Homepage from "./Homepage";
+import AboutLittleLemon from "./AboutLittleLemon";
+import Contact from "./Contact";
+import { Routes, Route, Link } from "react-router-dom";
+
+function App() {
+  return (
+    <div> 
+	  <nav>
+      <Link to="/" className="nav-item">Homepage</Link>
+      <Link to="/about" className="nav-item">About Little Lemon</Link>
+	  </nav>
+      <Routes> 
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
+
+Inside the App.js file's App function's return statement, locate the nav element, and inside of it, add another <Link> element, with the to attribute pointing to contact, the className set to "nav-item", and the the text inside the Link element's opening and closing tags set to Contact.
+import "./App.css";
+import Homepage from "./Homepage";
+import AboutLittleLemon from "./AboutLittleLemon";
+import Contact from "./Contact";
+import { Routes, Route, Link } from "react-router-dom";
+
+function App() {
+  return (
+    <div> 
+	  <nav>
+      <Link to="/" className="nav-item">Homepage</Link>
+      <Link to="/about" className="nav-item">About Little Lemon</Link>
+      <Link to="/contact" className="nav-item">Contact</Link>
+	  </nav>
+      <Routes> 
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+      </Routes>
+    </div>
+  );
+};
+export default App;
+
+Inside the Routes element, add a third route, with the path attribute pointing to "/contact", and the element attribute set to {<Contact />}. 
+import "./App.css";
+import Homepage from "./Homepage";
+import AboutLittleLemon from "./AboutLittleLemon";
+import Contact from "./Contact";
+import { Routes, Route, Link } from "react-router-dom";
+
+function App() {
+  return (
+    <div> 
+	  <nav>
+      <Link to="/" className="nav-item">Homepage</Link>
+      <Link to="/about" className="nav-item">About Little Lemon</Link>
+      <Link to="/contact" className="nav-item">Contact</Link>
+	  </nav>
+      <Routes> 
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+    </div>
+  );
+};
+
+
+
+
+
